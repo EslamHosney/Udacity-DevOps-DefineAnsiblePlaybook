@@ -1,8 +1,11 @@
 ---
+  #will only be shown inside the Ansible Cli
   - name: Print env variable
     shell:  echo $PATH
+    #shell:  echo Eslam Samy Hosney
     register: print_result
-    
+  
+  #show the output on the user/us Cli
   - name: print message
     debug:
       msg: "{{ print_result.stdout_lines }}"
